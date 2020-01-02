@@ -8,7 +8,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SeleniumTest{
 	public static void main(String[] args) {
 		WebDriver driver;
-		System.setProperty("webdriver.chrome.driver", "D:\\Softwares\\eclipse-workspace\\lib\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "D:\\Softwares\\eclipse-workspace\\lib\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.amazon.in/");
 		driver.manage().window().maximize();
